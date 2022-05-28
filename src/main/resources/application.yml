@@ -8,7 +8,12 @@ server:
 eureka:
   instance:
     hostname: viniciuscluna-discovery.herokuapp.com
-    non-secure-port: 80
+    home-page-url: https://${eureka.instance.hostName}/
+    home-page-url-path: https://${eureka.instance.hostName}
   client:
+    serviceUrl:
+      defaultZone: https://viniciuscluna-discovery.herokuapp.com/eureka/
+      non-secure-port: 80
+      secure-port: 443
     fetch-registry: false
     register-with-eureka: false
