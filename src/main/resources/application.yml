@@ -6,6 +6,8 @@ server:
 
 
 eureka:
+  instance:
+    hostname: viniciuscluna-discovery.herokuapp.com
   client:
     fetch-registry: false
     register-with-eureka: false
